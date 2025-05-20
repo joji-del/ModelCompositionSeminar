@@ -160,44 +160,6 @@ print(f"Recall: {recall_score(y_test, y_pred):.4f}")
 print(f"ROC AUC: {roc_auc_score(y_test, y_pred):.4f}")
 ```
 
-## Визуализация
-
-Пример визуализации важности признаков (на основе случайного леса):
-
-```chartjs
-{
-  "type": "bar",
-  "data": {
-    "labels": ["SkinThickness", "BloodPressure", "Pregnancies", "Insulin", "Age", "DiabetesPedigreeFunction", "BMI", "Glucose"],
-    "datasets": [
-      {
-        "label": "Feature Importance",
-        "data": [0.05, 0.07, 0.09, 0.10, 0.12, 0.15, 0.18, 0.24],
-        "backgroundColor": "#4ECDC4",
-        "borderColor": "#4ECDC4",
-        "borderWidth": 1
-      }
-    ]
-  },
-  "options": {
-    "indexAxis": "y",
-    "scales": {
-      "x": {
-        "beginAtZero": true,
-        "title": { "display": true, "text": "Feature Importance" }
-      },
-      "y": {
-        "title": { "display": true, "text": "Features" }
-      }
-    },
-    "plugins": {
-      "title": { "display": true, "text": "Feature Importance for Random Forest" }
-    }
-  }
-}
-```
-
-*Примечание*: Значения важности признаков в графике являются примерными и могут отличаться в зависимости от конкретного запуска модели.
 
 ## Результаты
 
@@ -205,24 +167,3 @@ print(f"ROC AUC: {roc_auc_score(y_test, y_pred):.4f}")
 - **Бэггинг**: Улучшает стабильность и точность по сравнению с одним деревом за счет ансамблевого подхода.
 - **Случайный лес**: Зачастую демонстрирует наилучшие результаты благодаря случайному выбору признаков и деревьев, что снижает переобучение и повышает обобщающую способность.
 - Наиболее важные признаки (на основе случайного леса): `Glucose`, `BMI`, `DiabetesPedigreeFunction`, `Age`.
-
-## Вклад
-
-Если вы хотите внести свой вклад:
-1. Сделайте форк репозитория.
-2. Создайте новую ветку (`git checkout -b feature-branch`).
-3. Внесите изменения и закоммитьте их (`git commit -am 'Add new feature'`).
-4. Отправьте изменения в ваш форк (`git push origin feature-branch`).
-5. Создайте Pull Request.
-
-## Лицензия
-
-Проект распространяется под лицензией MIT. Подробности в файле `LICENSE`.
-
-## Контакты
-
-Для вопросов или предложений используйте Issues в GitHub или пишите на: <your-email@example.com>.
-
----
-
-*Создано для изучения композиций моделей машинного обучения и анализа данных. Успехов в обучении!*
